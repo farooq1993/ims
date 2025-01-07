@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Add Stock Movement</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h2 class="text-primary">Add Stock Movement</h2>
+
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_product" class="form-label">Product</label>
+                    {{ form.product }}
+                    {% if form.product.errors %}
+                        <div class="text-danger small">{{ form.product.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_quantity" class="form-label">Quantity</label>
+                    {{ form.quantity }}
+                    {% if form.quantity.errors %}
+                        <div class="text-danger small">{{ form.quantity.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_movement_type" class="form-label">Movement Type</label>
+                    {{ form.movement_type }}
+                    {% if form.movement_type.errors %}
+                        <div class="text-danger small">{{ form.movement_type.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_movement_date" class="form-label">Movement Date</label>
+                    {{ form.movement_date }}
+                    {% if form.movement_date.errors %}
+                        <div class="text-danger small">{{ form.movement_date.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_notes" class="form-label">Notes</label>
+                    {{ form.notes }}
+                    {% if form.notes.errors %}
+                        <div class="text-danger small">{{ form.notes.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <button type="submit" class="btn btn-success px-4 mt-4">Submit</button>
+            </form>
+        </div>
+
+        <script src="" async defer></script>
+    </body>
+</html>

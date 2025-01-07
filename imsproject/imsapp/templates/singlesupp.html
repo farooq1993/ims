@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Get Suppleir Details</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    </head>
+    <body>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+              </tr>
+            </thead>
+            <tbody>
+                <td>{{ suppleirs.name }}</td>
+                <td>{{ suppleirs.email }}</td>
+                <td>{{ suppleirs.phone }}</td>
+                <td>{{ suppleirs.address }}</td>
+                <td>
+                    <a href="{% url 'DeleteSupp' suppleirs.id %}">
+                    <button class='btn btn-warning'>Delete</button>
+                    </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        <script src="" async defer></script>
+    </body>
+</html>

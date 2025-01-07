@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    </head>
+    <body>
+       <div class='row'>
+        <div class='col col-md-3 mx-5 mt-5'>
+        <button class="text-white">
+            <a href="{% url 'AddProduct' %}">Add Product</a>
+        </button>
+    </div>
+        <div class='col col-md-3 mx-5 mt-5'>
+            <button class="text-white">
+                <a href="{% url 'AllProducts' %}">Product List</a>
+            </button>
+        </div>
+        <div class='col col-md-3 mx-5 mt-5'>
+            <button class="text-white">
+                <a href="{% url 'AddSuppleir' %}">Add Suppleir</a>
+            </button>
+        </div>
+
+        <div class='col col-md-3 mx-5 mt-5'>
+            <button class="text-white">
+                <a href="{% url 'AllSuppleirList' %}">Show Suppleir List</a>
+            </button>
+        </div>
+
+        <div class='col col-md-3 mx-5 mt-5'>
+            <button class="text-white">
+                <a href="{% url 'Addstockmovement' %}">Add stocke Movement</a>
+            </button>
+        </div>
+
+        <div class='col col-md-3 mx-5 mt-5'>
+            <button class="text-white">
+                <a href="{% url 'create_sales_order' %}">Sales Order</a>
+            </button>
+        </div>
+        
+       </div>
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>
